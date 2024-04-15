@@ -1,5 +1,9 @@
 name: Events Demo 1
-on: ...
+on:
+  pull_request:
+    types:
+      - opened # activity type
+  workflow_dispatch: # how add the second event inthis mode
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,3 +20,9 @@ jobs:
         run: npm run build
       - name: Deploy project
         run: echo "Deploying..."
+# on: [push, workflow_dispatch] : passing multupple events
+# passing activity type to and event if available! :
+# on:
+# pull_request:
+#  types: [opened,closed] or above
+# the next event must be at the same position as the first one  workflow_dispatch:
