@@ -46,3 +46,16 @@ jobs:
 # = 'dev-*' all dev branches start with dev-
 # 'feat/**'
 # we can do also based on the path (if it's available for that event )ex: igoner the path to just in the specifi path
+
+# important :  By default, Pull Requests based on Forks do NOT trigger a workflow
+# Reason: Everyone can fork & open pull requests Malicious workflow runs & excess cost could be caused
+# so First-time contributors must be approved manually
+# cancelling : By default, Workflows get cancelled if Jobs fail
+# By default, a Job fails if a least one Step fails
+# You can also cancel workflows manually
+# Skipping : BIJ default, all matching events start a workflow
+# we can use skip when we add some changesin our code when we know it does not have any effect on code or maybe it's a comment
+# to skip when we commit we need to put one these thins in the commit message
+#[skip ci] [ci skip] [no ci] [skip actions] [actions skip]
+
+#
